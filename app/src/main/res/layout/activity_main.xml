@@ -18,6 +18,7 @@
         tools:layout_editor_absoluteY="8dp">
 
         <RelativeLayout
+            android:id="@+id/weightBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="5dp"
@@ -92,6 +93,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/yogaBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
@@ -165,6 +167,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/cardioBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
