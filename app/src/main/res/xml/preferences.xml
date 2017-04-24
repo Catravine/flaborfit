@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="night_mode"
+        android:title="Night Mode"
+        android:summary="Recolors the app for low light"
+        android:defaultValue="false" />
+</PreferenceScreen>
