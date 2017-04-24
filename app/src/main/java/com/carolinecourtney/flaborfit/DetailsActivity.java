@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ImageView;
+import android.preference.PreferenceManager;
+import android.content.SharedPreferences;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -13,8 +15,6 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-//        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-//        System.out.println(sharedPref);
 
         TextView exerciseText = (TextView)findViewById(R.id.exerciseTitle);
         ImageView exersizeImage = (ImageView)findViewById(R.id.exerciseImage);
@@ -33,5 +33,11 @@ public class DetailsActivity extends AppCompatActivity {
             exersizeImage.setImageDrawable(getResources().getDrawable(R.drawable.heart));
             mainBG.setBackgroundColor(Color.parseColor("#52ad56"));
         }
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (prefs.getBoolean(SettingsActivity.PREF_NIGHT_MODE, false)) { // night mode ON
+            mainBG.setBackgroundColor(Color.parseColor("#222222"));
+        }
+
     }
 }
