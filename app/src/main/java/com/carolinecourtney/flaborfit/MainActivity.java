@@ -58,9 +58,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.settings:
-                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivity(intent);
-                System.out.println("I picked 'settings'.");
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
             default:
                 return super.onOptionsItemSelected(item);
         }
